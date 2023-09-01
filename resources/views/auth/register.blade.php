@@ -1,14 +1,19 @@
 <x-guest-layout>
+
     <x-authentication-card>
         <x-slot name="logo">
+        
             <x-authentication-card-logo />
         </x-slot>
-
-        <x-validation-errors class="mb-4" />
+        
+     <x-validation-errors class="mb-4" />
 
         <form method="POST" action="{{ route('register') }}">
+        
+        <img src="{{url('images/compass.jpg')}}" alt="" height="10">
             @csrf
-
+               
+                <br>
             <div>
                 <x-label for="name" value="{{ __('Name') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
@@ -19,6 +24,15 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             </div>
 
+           <!--  <div>
+                <x-label for="phone" value="{{ __('phone') }}" />
+                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus autocomplete="phone" />
+            </div> -->
+
+            <div>
+                <x-label for="address" value="{{ __('address') }}" />
+                <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required autofocus autocomplete="address" />
+            </div>
             <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" />
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
@@ -58,3 +72,4 @@
         </form>
     </x-authentication-card>
 </x-guest-layout>
+

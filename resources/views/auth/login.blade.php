@@ -13,8 +13,9 @@
         @endif
 
         <form method="POST" action="{{ route('login') }}">
+          <img src="{{ asset('images/compass.jpg')}}" alt="">
             @csrf
-
+             <br>
             <div>
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
