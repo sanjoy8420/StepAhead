@@ -16,7 +16,9 @@
             <p>STEP_AHEAD .</p>
         </div>
         <div class="nav-button">
-            <button class="btn" id="registerBtn">Sign In</button>
+        <a href="{{url('/')}}/login" >
+            <button class="btn" id="registerBtn">Log In</button>
+        </a>
         </div>
         <div class="nav-menu-btn">
             <i class="bx bx-menu"></i>

@@ -72,7 +72,7 @@ class AuthController extends Controller
         
       }
       event(new Registered($user));
-      return redirect()->route('welcome');
+      return redirect()->back();
     }
 
      public function home()
