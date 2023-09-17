@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Post;
+use App\Models\Comment;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -44,4 +46,18 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function post()
+    {
+        return $this->hasMany(Post::class,'user_id','id');
+    }
+    public function comment()
+    {
+        return $this->hasMany(Comment::class,'user_id','id');
+    }
+    public function connection()
+    {
+        return $this->hasMany(Connection::class,'user_id','id');
+    }
+
 }

@@ -1,5 +1,7 @@
 <?php
-
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ConnectionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
@@ -51,3 +53,11 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
  
     return redirect('/home');
 })->middleware(['auth', 'signed'])->name('verification.verify');
+
+
+Route::resources([
+    'posts'              =>      PostController::class,
+    'comments'    =>      CommentController::class,
+    'connections'                =>      ConnectionController::class
+    
+]);
