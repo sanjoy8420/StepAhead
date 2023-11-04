@@ -17,21 +17,23 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
+*/
 
 Route::middleware('guest')->group(function(){
+Route::get('/',[AuthController::class,'index']); 
 Route::get('/login',[AuthController::class,'index']);
 Route::post('/login',[AuthController::class,'login']);
 Route::get('/register',[AuthController::class,'index2']);
-Route::post('/register',[AuthController::class,'register']);
+Route::post('/register',[\App\Http\Controllers\AuthController::class,'register']);
 });
 
 Route::get('home',[AuthController::class,'redirect'])->middleware('auth','verified');
 
 Route::group(['middleware'=>'auth'],function(){
-Route::get('logout',[AuthController::class,'logout']);
+Route::get('logout',[\App\Http\Controllers\AuthController::class,'logout']);
 });
 
 Route::get('/email/verify', function () {

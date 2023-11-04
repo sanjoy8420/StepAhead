@@ -1,0 +1,123 @@
+.input-box{
+   width: 52vw; 
+   background-color: rgba(239, 196, 166, 0.2);
+   border-style: solid;
+   border-width: 1px;
+   border-radius: 2rem;
+}
+.search-box{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 50vw;
+    height: 2rem;
+    border: none;
+}
+
+
+.post{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80vw;
+    justify-content: space-evenly;
+}
+
+.post-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 10px 0 0;    
+}
+
+svg:hover{
+    scale: 1.2;
+}
+
+.main-post{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 10px;
+}
+
+.class-body{
+    width: 100vw;
+}
+
+.main-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-main-reach{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.post-main-reach>p{
+    margin-top:12px;
+    margin-left:20px;
+    color: grey;
+}
+.post-container {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Styles for the user avatar */
+  .user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 16px;
+    border-style: solid;
+    border-color:#013555;
+    border-width: 3px;
+  }
+  .user-name{
+    margin-top:8px;
+    margin-right: 20px;
+  }
+
+  /* Styles for the post content */
+  .post-content {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .post-main{
+    display: flex;
+    flex-direction: column;
+    margin-right:2rem;
+  }
+
+  /* Styles for the post actions (e.g., like, retweet, comment) */
+  .post-actions {
+    margin-top: -10px;
+    margin-bottom: -5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .post-reaction-icons>svg:hover{
+    scale: 1.1;
+  }
+
+  .post-image{
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+  }
